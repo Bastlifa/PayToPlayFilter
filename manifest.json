@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Paid Game LFG Filter",
+    "description": "Plugin to hide paid game on Roll20 LFG forum",
+    "version": "0.1",
+    "content_scripts":[
+        {
+            "matches":[
+            "https://app.roll20.net/forum/category/22/*"
+            ],
+            "js": ["siteFilter.js"]
+        }
+        ],
+    "browser_action": {
+        "default_icon": "icon.png"
+        },
+    "background": {
+            "scripts": ["siteFilter.js"],
+            "persistent": false
+        },
+    "permissions": [
+        "activeTab"
+        ]
+}
